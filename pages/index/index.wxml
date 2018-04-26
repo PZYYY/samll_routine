@@ -1,0 +1,8 @@
+<!--index.wxml-->
+<view class="body">
+  <image src="/images/img8.jpg" class="user_portrait"></image>
+  <text class="user_text">Hello,小程序！</text>
+  <view class="user_btn" catchtap="startBtn">
+    <text>开启小程序之旅</text>
+  </view>
+</view>

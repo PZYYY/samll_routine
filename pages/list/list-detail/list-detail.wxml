@@ -1,0 +1,21 @@
+<view>
+  <image src="{{listDetail.img}}" class="top-img"></image>
+  <image src="{{bIsPlaying?'/images/stop.png':'/images/music.png'}}" class="music" bindtap="onMusicTap" animation="{{animationData}}"></image>
+    <view class="container">
+      <view class="info">
+        <image src="{{listDetail.portrait}}" class="info-portrait"></image>
+        <text class="info-name">{{listDetail.author}}</text>
+        <text class="info-time">发表于<text class="time">{{listDetail.time}}</text></text>
+      </view>
+      <text class="tittle">{{listDetail.tittle}}</text>
+      <view class="middle">
+        <view class="horizon"></view>
+        <view class="icon">
+          <image src="/images/love.png" wx:if="{{collectState}}" bindtap="collectText"></image> 
+          <image src="/images/nocollect.png" wx:else bindtap="collectText"></image>
+          <image src="/images/share.png" bindtap="shareText"></image>
+        </view>
+      </view>
+      <text class="passage">{{listDetail.text}}</text>
+    </view>
+</view>

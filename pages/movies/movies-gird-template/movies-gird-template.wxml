@@ -1,0 +1,19 @@
+<import src="../movie-temlate/movie-temlate.wxml" />
+<template name="moviesGirdTemplate">
+  <view class="content">
+     <!-- <scroll-view  scroll-y="true" bindscrolltolower="onLoadMore">
+      <view class="gird-template">
+        <block wx:for="{{totalMovies}}" wx:for-item="item" wx:key="key">
+          <template is="movieTemplate" data="{{item}}" />
+        </block>
+      </view>
+    </scroll-view>  -->
+    <view>
+      <view class="gird-template">
+        <block wx:for="{{totalMovies}}" wx:for-item="item" wx:key="key">
+          <template is="movieTemplate" data="{{item}}" />
+        </block>
+      </view>
+    </view> 
+  </view>
+</template>

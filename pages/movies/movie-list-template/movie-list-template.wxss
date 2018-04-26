@@ -1,0 +1,25 @@
+.movie-list-template {
+  background: #fff;
+}
+
+.tittle {
+  display: flex;
+  justify-content: space-between;
+  padding: 20rpx;
+  box-sizing: border-box;
+  font-size: 35rpx;
+}
+
+.hotting {
+  color: #333;
+}
+
+.more {
+  color: #004e9b;
+}
+
+.template-item {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 30rpx;
+}

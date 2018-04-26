@@ -1,0 +1,20 @@
+<template name="list">
+   <view class="list_container">
+      <view class="top">
+        <image src="{{item.portrait}}" class="top-portrait"></image>
+        <text class="top-date">{{item.date}}</text>
+      </view>
+      <image src="{{item.img}}" class="container-img"></image>
+      <text class="container-text">{{item.textShort}}</text>
+      <view class="bottom">
+        <view class="bottom-collect">
+          <image src="/images/collect.png"></image>
+          <text>{{item.collect}}</text>
+        </view>
+        <view>
+          <image src="/images/see.png"></image>
+          <text>{{item.see}}</text>
+        </view>
+      </view>
+    </view>
+</template>

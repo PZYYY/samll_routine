@@ -1,0 +1,4 @@
+<import src="../movies-gird-template/movies-gird-template.wxml" />
+  <view class="more-movies">
+   <template is="moviesGirdTemplate" data="{{totalMovies}}"></template>
+  </view>

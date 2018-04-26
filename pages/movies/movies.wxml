@@ -1,0 +1,19 @@
+<import src="movie-list-template/movie-list-template.wxml"/>
+<import src="movies-gird-template/movies-gird-template.wxml"/>
+
+<view class="movieListTemplate">
+  <view class="search">
+    <icon type="search" size="18"/>
+    <input placeholder="输入电影名称" class="searchBox" bindfocus="onFocusTap" bindchange="onChangeTap"/>
+    <icon type="cancel" size="25" color="#666" catchtap="onCancelTap" wx:if="{{showCancelIcon}}"/>
+  </view>
+  <view wx:if="{{showListPanel}}">
+    <template is="movieListTemplate" data="{{...inTheaters}}"/>
+    <template is="movieListTemplate" data="{{...comingSoon}}"/>
+    <template is="movieListTemplate" data="{{...top250}}"/>
+  </view>
+
+  <view class="search-panel" wx:if="{{showSearchPanel}}">
+     <template is="moviesGirdTemplate" data="{{...searchMovie}}"/> 
+  </view>
+</view> 

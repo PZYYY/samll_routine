@@ -1,0 +1,60 @@
+<import src="../stars-template/stars-template.wxml" />
+<import src="../movie-temlate/movie-temlate.wxml" />
+<view>
+  <!--头部图片部分  -->
+  <view class="top">
+    <image src="{{movieDetailData.images.medium}}" class="top-img"></image> 
+    <view class="top-text">
+      <text class="film-name">{{movieDetailData.original_title}}</text>
+      <text class="film-address-time">{{countries}} · {{movieDetailData.year}}<text></text></text>
+      <view class="film_like-comment">
+        <text class="film_like">{{movieDetailData.collect_count}}<text class="film-comment">喜欢</text></text>
+        <text>{{movieDetailData.reviews_count}}<text class="film-comment">条评论</text></text>
+      </view>
+    </view>
+    <image src="{{movieDetailData.images.small}}" class="film-img"></image>
+  </view>
+  <!--/头部图片部分  -->
+
+  <!-- 中间详细信息部分 -->
+  <view class="middle">
+    <text class="middle-filmname">{{movieDetailData.title}}</text>
+    <view class="middle-score">
+      <text class="space">评分</text> 
+      <template is="starsTemplate" data="{{item}}"/>
+    </view>
+    <view class="middle-score">
+      <text class="space">导演</text>
+      <text> {{directors}}</text>
+    </view>
+    <view class="middle-score">
+      <text class="space">影人</text>
+      <text>{{casts}}</text>
+    </view>
+    <view class="middle-score">
+      <text class="space">类型</text>
+      <text> {{movieType}}</text>
+    </view>
+  </view>
+  <view class="line"></view>
+  <!-- /中间详细信息部分 -->
+
+  <!--剧情简介部分  -->
+  <view class="summary">
+    <text>剧情简介</text>
+    <text class="summary-content">{{movieDetailData.summary}}</text>
+  </view>
+  <!--/剧情简介部分  -->
+
+  <view class="line"></view>
+  <!--影人信息  -->
+  <view class="performer-info">
+    <text>影人</text>
+    <view class="casts-info">
+      <view wx:for="{{movieDetailData.casts}}" wx:for-item="item" wx:key="key">
+      <template is="movieTemplate" data="{{item}}"></template>
+    </view>
+    </view>
+  </view>
+  <!--影人信息  -->
+</view>

@@ -1,0 +1,12 @@
+@import '../movie-temlate/movie-temlate.wxss';
+.gird-template {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  height: 1300rpx;
+  padding: 10rpx;
+  box-sizing: border-box;
+}
+.content{
+  height: 100%;
+}

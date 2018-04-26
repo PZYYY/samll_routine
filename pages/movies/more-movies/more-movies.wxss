@@ -1,0 +1,5 @@
+@import '../movies-gird-template/movies-gird-template.wxss';
+
+page {
+  /* background: #f8f8f8; */
+}

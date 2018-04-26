@@ -1,0 +1,36 @@
+<!--引入模板  -->
+<import src="list-template/list-template.wxml"/>
+<!--/引入模板  -->
+<view class="body">
+<!-- <scroll-view scroll-y="true" style="height: 2027px"> -->
+<!--轮播图  -->
+  <swiper indicator-dots="true" indicator-color="#fff" indicator-active-color="#8080ff" autoplay="true" circular="true">
+    <swiper-item>
+      <image src="/images/img1.jpg"></image>
+    </swiper-item>
+    <swiper-item>
+      <image src="/images/img2.jpg"></image>
+    </swiper-item>
+    <swiper-item>
+      <image src="/images/img3.jpg"></image>
+    </swiper-item>
+    <swiper-item>
+      <image src="/images/img4.jpg"></image>
+    </swiper-item>
+    <swiper-item>
+      <image src="/images/img5.jpg"></image>
+    </swiper-item>
+  </swiper>
+<!--/轮播图  -->
+
+<!--文章列表  -->
+   <block wx:for="{{dataList}}" wx:key="key">
+   <view bindtap="itemDetail" data-listId="{{item.listId}}">
+      <!--引用模板  -->
+        <template is="list" data="{{item}}" />
+      <!--/引用模板  -->
+    </view>
+  </block>
+<!--/文章列表  -->
+<!-- </scroll-view> -->
+</view>

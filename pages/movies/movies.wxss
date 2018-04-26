@@ -1,0 +1,33 @@
+@import "movie-list-template/movie-list-template";
+@import "movie-temlate/movie-temlate.wxss";
+@import "stars-template/stars-template.wxss";
+@import "movies-gird-template/movies-gird-template.wxss";
+
+page {
+ background: #f2f2f2;
+}
+
+.search {
+  display: flex;
+  padding: 10rpx;
+  box-sizing: border-box;
+}
+
+icon:nth-child(1) {
+  margin:10rpx 25rpx 0 0;
+}
+
+.searchBox {
+  padding-right: 250rpx;
+  box-sizing: border-box;
+  font-size: 30rpx;
+}
+
+.search-panel {
+ background: #fff;
+}
+
+.movieListTemplate {
+  padding: 10rpx;
+  box-sizing: border-box;
+}
