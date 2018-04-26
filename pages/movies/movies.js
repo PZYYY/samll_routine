@@ -44,6 +44,7 @@ Page({
 
  // 当请求成功时执行的回调函数
   successCallback(data, movieType, typeName) {
+    wx.showLoading({ title: '正在加载，请稍候...'})
     var aMovieList = []
     for(var idx in data.subjects){
       var doubanData = data.subjects[idx]  // 取data数组中具体的每一个数据，遍历
@@ -63,6 +64,7 @@ Page({
     }
     // oMovieData[movieType] = aMovieList
     this.setData(oMovieData)
+    wx.hideLoading()
   },
 
   //点击更多跳转到详情页
