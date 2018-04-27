@@ -70,44 +70,40 @@ Page({
   },
 
   // 当请求成功时执行的回调函数
-  successCallback(data) {
-    if (!data.subjects.length) {  // 当没有数据以后将不再请求
+  successCallback(response) {
+    // console.log('response', response.subjects)
+    if (response.subjects.length == 0) {  // 当没有数据以后将不再请求
       this.setData({isreq: true})
       return
-    }
-    wx.showLoading({
-      title: '正在加载，请稍候...'
-    })
-    var totalMovies = []
-    // var aMovieList = []
-    for (var idx in data.subjects) {
-      var doubanData = data.subjects[idx]  // 取data数组中具体的每一个数据，遍历
-      if (doubanData.title.length > 6) {
-        doubanData.title = doubanData.title.substr(0, 6) + '...'
-      }
-      var stars = doubanData.rating.stars // 星星
-      doubanData.rating.aStars = getstars.toStarsArray(stars)
-      this.data.aMovieList.push(doubanData)
-    }
-    console.log('aMovieList', this.data.aMovieList)
-    if (!this.data.isEmpty) {
-      totalMovies = this.data.totalMovies.concat(this.data.aMovieList) // 数组元素累加，返回一个新数组
-    }else{
-      this.data.totalMovies = this.data.aMovieList
-      totalMovies = this.data.totalMovies
-      this.data.isEmpty = false
-    }
-    this.data.startIndex += 20    // 滚动到底部累加 
-    this.setData({totalMovies})
+    } else {
+      // this.data.isEmpty = false
+      wx.showLoading({
+        title: '正在拼命加载'
+      })
+      response.subjects.forEach((item, index) => { // 一次返回20条数据
+        if (item.title.length > 6) {
+          item.title = item.title.substr(0, 6) + '...'
+        }
+        let stars = item.rating.stars // 星星
+        item.rating.aStars = getstars.toStarsArray(stars)
+        this.data.aMovieList.push(item)
+      })
+      console.log('aMovieList', this.data.aMovieList)
+      this.data.isreq = false
+      this.data.startIndex += 20 // 滚动到底部累加 
+      this.setData({
+        totalMovies: this.data.aMovieList
+      })
       wx.hideLoading()
       wx.stopPullDownRefresh()
+    }
   },
 
   // 滚动到底部加载更多
   onReachBottom () {
     if (this.data.isreq) return
-    var moreData = this.data.dataURL + '?start=' + this.data.startIndex + '&count=20'
-    this.getMovieListData(moreData)
+    var moreDataUrl = this.data.dataURL + '?start=' + this.data.startIndex + '&count=20'
+    this.getMovieListData(moreDataUrl)
   },
 
   // 下拉刷新 （重新加载数据）
@@ -115,15 +111,14 @@ Page({
     var refreshMovies = this.data.dataURL + '?start=0&count=20'
     this.getMovieListData(refreshMovies)
     this.data.aMovieList = []
-    this.data.isEmpty = true
+    // this.data.isEmpty = true
   },
-  /**
-  * 跳转到电影详情
-  */
+
+  // 点击跳转电影详情页
   onMovieDetailTap(event) {
     let movieId = event.currentTarget.dataset.movieid
     wx.navigateTo({
-      url: `movie-detail/movie-detail?id=${movieId}`
+      url: `../movie-detail/movie-detail?id=${movieId}`
     })
   }
 })
