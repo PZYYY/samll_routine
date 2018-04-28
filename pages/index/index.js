@@ -7,7 +7,7 @@ Page({
 
   },
   startBtn () {
-    wx.navigateTo({
+    wx.switchTab({
       url: '../list/list'
     })
   }
