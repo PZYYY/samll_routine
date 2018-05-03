@@ -14,7 +14,8 @@ Page({
    */
   onLoad: function (options) {
     var movieId = options.id
-    var movieDetailUrl = app.globalData.g_getMovieUrl + '/subject2/' + movieId
+    // var movieDetailUrl = app.globalData.g_getMovieUrl + '/subject2/' + movieId
+    var movieDetailUrl = app.globalData.g_getMovieUrl + '/v2/movie/subject/' + movieId
     this.getMovieDetail(movieDetailUrl)
   },
 
@@ -46,7 +47,7 @@ Page({
     let movieType = []
     // 影人
     for (let i = 0; i < data.casts.length; i++) {
-      casts.push(data.casts[i].name)
+      casts.push(data.casts[i].name + ' ')
       data.casts[i].images = data.casts[i].avatars
       data.casts[i].title = data.casts[i].name
     }

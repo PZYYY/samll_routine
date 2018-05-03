@@ -3,7 +3,7 @@ App({
   globalData: {
     g_isPlaying: false,
     // g_getMovieUrl:'https://api.douban.com'
-    // g_getMovieUrl:'http://t.yushu.im/'  // 老坛
-    g_getMovieUrl:'http://test2.birdai.mobi/link/douban'
+    g_getMovieUrl:'https://douban.uieee.com' // 知乎
+    // g_getMovieUrl:'http://test2.birdai.mobi/link/douban'
   }
 })

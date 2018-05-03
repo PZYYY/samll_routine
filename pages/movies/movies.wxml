@@ -14,6 +14,7 @@
   </view>
 
   <view class="search-panel" wx:if="{{showSearchPanel}}">
-     <template is="moviesGirdTemplate" data="{{...searchMovie}}"/> 
+     <template is="moviesGirdTemplate" data="{{...searchMovie}}"/>
+     <!-- <image src="/images/notfind.png" width="200rpx" height="200rpx" wx:if="{{showTipsImg}}"></image>  -->
   </view>
 </view> 

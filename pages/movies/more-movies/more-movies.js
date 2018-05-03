@@ -37,16 +37,16 @@ Page({
   onShow () {
     switch (this.data.typeName) {
       case '正在热映':
-        // this.data.dataURL = app.globalData.g_getMovieUrl + '/v2/movie/in_theaters'
-        this.data.dataURL = app.globalData.g_getMovieUrl + '/in_theaters'
+        this.data.dataURL = app.globalData.g_getMovieUrl + '/v2/movie/in_theaters'
+        // this.data.dataURL = app.globalData.g_getMovieUrl + '/in_theaters'
         break
       case '即将上映':
-        // this.data.dataURL = app.globalData.g_getMovieUrl + '/v2/movie/coming_soon'
-        this.data.dataURL = app.globalData.g_getMovieUrl + '/coming_soon'
+        this.data.dataURL = app.globalData.g_getMovieUrl + '/v2/movie/coming_soon'
+        // this.data.dataURL = app.globalData.g_getMovieUrl + '/coming_soon'
         break
       case '豆瓣TOP250':
-        // this.data.dataURL = app.globalData.g_getMovieUrl + '/v2/movie/top250'
-        this.data.dataURL = app.globalData.g_getMovieUrl + '/top250'
+        this.data.dataURL = app.globalData.g_getMovieUrl + '/v2/movie/top250'
+        // this.data.dataURL = app.globalData.g_getMovieUrl + '/top250'
         break
     }
     this.getMovieListData(this.data.dataURL)
