@@ -22,6 +22,7 @@ Page({
   onShow () {},
 
   getMovieDetail (url) {
+    wx.showLoading({ title: '正在拼命加载' })
     var that = this
     wx.request({  // 网络请求
       url: url,
@@ -39,6 +40,7 @@ Page({
 
   // 当请求成功执行的回调
   successCallback (data) {
+    wx.hideLoading()
     console.log(data)
     let movieDetailData = {}
     let casts = []

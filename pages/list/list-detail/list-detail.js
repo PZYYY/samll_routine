@@ -105,7 +105,6 @@ Page({
 
     // 音乐播放
     onMusicTap (event) {
-      console.log('this.data.listId', this.data.listId)
       var playState = this.data.bIsPlaying  // 音乐播放状态
       if (playState) {
         wx.pauseBackgroundAudio()  // 音乐暂停

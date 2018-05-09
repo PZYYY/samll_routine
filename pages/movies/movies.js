@@ -44,7 +44,7 @@ Page({
 
  // 当请求成功时执行的回调函数
   successCallback(data, movieType, typeName) {
-    wx.showLoading({ title: '正在加载，请稍候...'})
+    wx.showLoading({ title: '正在拼命加载'})
     var oMovieData = {}
     if (data.subjects.length > 0) {
       var aMovieList = []

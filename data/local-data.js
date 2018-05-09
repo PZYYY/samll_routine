@@ -1,6 +1,22 @@
 // 将模拟数据写在这里
  var dataList = [
    {
+     portrait: '/images/pic6.jpg',
+     date: 'Des 20 2017',
+     img: '/images/img10.gif',
+     text: '福克斯的新剧《天赋异禀》，每次提到这部剧，后台都有一票迷弟迷妹呼唤一个名字——北极星。告诉叔，你们盯着这一幕看了多少遍，在漫威漫画中，北极星名为洛娜·丹恩，是万磁王的女儿，快银和猩红女巫是她同父异母的兄弟姐妹。众所周知，万磁王这人四处播种，光是在真人剧集和电影中亮过相的子女就有好几个，快银和他总算也快要相认了。但剧中她的正牌男友是“交食”，这个变种人类似太阳黑子，能够储存和转化太阳能，威慑力不容小觑。但剧中她的正牌男友是“交食”，这个变种人类似太阳黑子，能够储存和转化太阳能，威慑力不容小觑。北极星洗澡时，隐藏身份的黑色染发剂褪掉，露出了原本的绿发。别看粉丝一口一个小姐姐这么叫，其实人家94年的妹子，身高175cm，从3岁起就开始学芭蕾。那种舞者的身材和气质都是自小就养成的，令人格外赏心悦目。她还因FTC科技挑战对机械产生了浓厚的兴趣，以机器人操控员和机械工程师的身份带队参加比赛，还曾获得过NASA/JPL和迪士尼幻想工程的赞助。目前她就读于富兰克林欧林工程学院，主修机械工程，预计2019年毕业。',
+     collect: 1243,
+     see: 4526,
+     author: '影视怪蜀黍',
+     time: '2017-12-25',
+     tittle: '介绍一下万磁王的女儿北极星？',
+     music: {
+       url: 'http://123.207.60.170/music/Polaris.mp3',
+       tittle: 'something just like this'
+     },
+     listId: 0
+   },
+   {
      portrait: '/images/pic4.jpg',
      date: 'Fes 20 2017',
      img: '/images/img8.gif',
@@ -11,26 +27,10 @@
      time: '2017-02-20',
      tittle: '奥黛丽·赫本 在时尚界的地位为什么那么高？',
      music: {
-       url: 'http://ws.stream.qqmusic.qq.com/C100002mWVx72p8Ugp.m4a?fromtag=38',
-       tittle: '恋恋风尘-老狼'
+       url: 'http://123.207.60.170/music/Moon River.mp3',
+       tittle: 'Moon River'
      },
-     listId: 0
-    },
-    {
-      portrait: '/images/pic6.jpg',
-      date: 'Des 20 2017',
-      img: '/images/img10.gif',
-      text: '福克斯的新剧《天赋异禀》第一季已经播了一半。播了一半，每次提到这部剧，后台都有一票迷弟迷妹呼唤一个名字——北极星。告诉叔，你们盯着这一幕看了多少遍，在漫威漫画中，北极星名为洛娜·丹恩，是万磁王的女儿，快银和猩红女巫是她同父异母的兄弟姐妹。众所周知，万磁王这人四处播种，光是在真人剧集和电影中亮过相的子女就有好几个，快银和他总算也快要相认了。但剧中她的正牌男友是“交食”，这个变种人类似太阳黑子，能够储存和转化太阳能，威慑力不容小觑。但剧中她的正牌男友是“交食”，这个变种人类似太阳黑子，能够储存和转化太阳能，威慑力不容小觑。北极星洗澡时，隐藏身份的黑色染发剂褪掉，露出了原本的绿发。别看粉丝一口一个小姐姐这么叫，其实人家94年的妹子，身高175cm，从3岁起就开始学芭蕾。那种舞者的身材和气质都是自小就养成的，令人格外赏心悦目。她还因FTC科技挑战对机械产生了浓厚的兴趣，以机器人操控员和机械工程师的身份带队参加比赛，还曾获得过NASA/JPL和迪士尼幻想工程的赞助。目前她就读于富兰克林欧林工程学院，主修机械工程，预计2019年毕业。',
-      collect: 1243,
-      see: 4526,
-      author: '影视怪蜀黍',
-      time: '2017-12-25',
-      tittle: '介绍一下万磁王的女儿北极星？',
-      music: {
-        url:'http://ws.stream.qqmusic.qq.com/M500001VfvsJ21xFqb.mp3?guid=ffffffff82def4af4b12b3cd9337d5e7&uin=346897220&vkey=6292F51E1E384E061FF02C31F716658E5C81F5594D561F2E88B854E81CAAB7806D5E4F103E55D33C16F3FAC506D1AB172DE8600B37E43FAD&fromtag=46',
-        tittle:'此时此刻-许巍'
-      },
-      listId: 1
+     listId: 1
     },
     {
       portrait: '/images/pic12.jpg',
@@ -43,8 +43,8 @@
       time: '2018-02-20',
       tittle: '时尚圈内对易烊千玺的评价如何？',
       music: {
-        url: 'http://ws.stream.qqmusic.qq.com/C100002I8eGJ28BI17.m4a?fromtag=38',
-        tittle: '朋友-谭咏麟'
+        url: 'http://123.207.60.170/music/call of the ambulance.mp3',
+        tittle: 'call of the ambulance'
       },
       listId: 2
     },
@@ -59,8 +59,8 @@
       time: '2018-03-10',
       tittle: '盘点维密秀场上的最美瞬间',
       music: {
-        url: 'http://ws.stream.qqmusic.qq.com/C100003507bR0gDKBm.m4a?fromtag=38',
-        tittle: '夜夜夜夜-齐秦'
+        url: 'http://123.207.60.170/music/weimishow.mp3',
+        tittle: 'Victoria show'
       },
       listId: 3
     },
@@ -75,8 +75,8 @@
       time: '2018-04-20',
       tittle: '如何评价尚语贤（Kiko）在唐人街探案2里的着装风格？',
       music: {
-        url: 'http://ws.stream.qqmusic.qq.com/C100003GdCmG4NkEOR.m4a?fromtag=38',
-        tittle: '鬼迷心窍-李宗盛'
+        url: 'http://123.207.60.170/music/Club Stylers - Welcome to New York.mp3',
+        tittle: 'Club Stylers - Welcome to New York'
       },
       listId: 4
     },
@@ -91,8 +91,8 @@
       time: '2017-11-14',
       tittle: '如何评价 John Galliano 在 Dior 时期的作品？',
       music: {
-        url: 'http://ws.stream.qqmusic.qq.com/C100004HLusI2lLjZy.m4a?fromtag=38',
-        tittle: '女儿情-万晓利'
+        url: 'http://123.207.60.170/music/show.mp3',
+        tittle: 'Dior Show'
       },
       listId: 5
     }
